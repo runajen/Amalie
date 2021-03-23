@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <stdlib.h>
+
+int main() {
+    int fd, sz;
+    char *buf = (char *) calloc(120, sizeof(char));
+    fd = open("foo.txt", O_RDONLY); 
+    if (fd < 0) {
+       perror("feil, error og alt det der"); exit(1);
+    }
+    sz = read(fd, buf, 120);
+    printf("Gjort et call (%d, buf, 120). Får i retur at %d bytes ble lest.\n", fd, sz);
+    printf("Så mange bytes: %s\n", buf);
+    close(fd);
+}
