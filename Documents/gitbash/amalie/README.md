@@ -1,0 +1,1 @@
+Går litt bedre nå
