@@ -12,4 +12,4 @@ int main() {
 
     close(fd);
 }
-**/ reads går opp
+**/ writes går opp
