@@ -6,3 +6,5 @@ int main()
 	fork();
 	fork();
 }
+
+/** clones øker for hver fork du legger inn i koden
